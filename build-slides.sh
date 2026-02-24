@@ -2,7 +2,7 @@
 
 set -e
 
-SOURCE_DIR="./src"
+SOURCE_DIR="./content"
 OUTPUT_DIR="./dist"
 
 # Clean and prepare output
@@ -11,7 +11,7 @@ mkdir -p "$OUTPUT_DIR"
 
 echo "🎞️ Generating all slides from '$SOURCE_DIR'..."
 
-# Generate all HTML slides in-place under src/
+# Generate all HTML slides in-place under content/
 npx @marp-team/marp-cli@latest "$SOURCE_DIR/**/*.md"
 
 # Move generated .html files into dist/

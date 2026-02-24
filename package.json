@@ -1,0 +1,22 @@
+{
+  "name": "batch-marp-publisher",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/pages-demo/marp#readme",
+  "bugs": {
+    "url": "https://github.com/pages-demo/marp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pages-demo/marp.git"
+  },
+  "license": "ISC",
+  "author": "Junian Dev",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "node build_marp_slides.js",
+    "serve": "npx http-server dist/"
+  }
+}
