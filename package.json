@@ -18,5 +18,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "node build_marp_slides.js",
     "serve": "npx http-server dist/"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3",
+    "glob": "^13.0.6"
   }
 }
