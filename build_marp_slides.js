@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { marpCli } from '@marp-team/marp-cli';
-import { glob } from 'glob';
 import { existsSync, rmSync, mkdirSync, readdirSync, renameSync } from 'fs';
 import { join, relative, dirname, basename } from 'path';
 
@@ -18,12 +17,12 @@ async function buildSlides() {
 
   console.log(`🎞️ Generating all slides from '${SOURCE_DIR}'...`);
 
-  // Find all markdown files
-  const markdownFiles = await glob(`${SOURCE_DIR}/**/*.md`);
-
-  // Generate all HTML slides in-place under content/
+  // Generate all HTML slides using marpCli with input/output directories
   try {
-    const exitCode = await marpCli(markdownFiles);
+    const exitCode = await marpCli([
+      '--input-dir', SOURCE_DIR,
+      '--output', OUTPUT_DIR
+    ]);
     if (exitCode !== 0) {
       throw new Error(`Marp CLI exited with code ${exitCode}`);
     }
