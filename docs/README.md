@@ -6,4 +6,4 @@ This reposiotry is a demo on how to build and host multiple Marp (Markdown Prese
 
 ## Guides
 
-- [How to Generate Multiple Markdown Presentations with Marp and JavaScript](https://www.juniandev.com/dev/marp-generate-multiple-presentations/)
+- [How to Generate Multiple Markdown Presentations to Pretty URL HTML with Marp and JavaScript](https://www.juniandev.com/dev/marp-generate-multiple-presentations/)
