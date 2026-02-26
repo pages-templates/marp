@@ -21,7 +21,7 @@ async function buildSlides() {
   try {
     const exitCode = await marpCli([
       '--input-dir', SOURCE_DIR,
-      '--output', OUTPUT_DIR
+      '--output', SOURCE_DIR
     ]);
     if (exitCode !== 0) {
       throw new Error(`Marp CLI exited with code ${exitCode}`);
